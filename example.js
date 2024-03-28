@@ -525,3 +525,10 @@ client.on('group_membership_request', async (notification) => {
     await client.approveGroupMembershipRequestss(notification.chatId, notification.author);
     await client.rejectGroupMembershipRequests(notification.chatId, notification.author);
 });
+
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received.');
+    console.log('Destroying the client');
+    client.destroy();
+    console.log('Client destroyed.');
+});
