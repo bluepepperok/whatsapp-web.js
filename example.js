@@ -7,6 +7,11 @@ const client = new Client({
         // args: ['--proxy-server=proxy-server-that-requires-authentication.example.com'],
         headless: false
     }
+    // ,
+    // webVersionCache: {
+    //     type: 'remote',
+    //     remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.50.html'
+    // }    
 });
 
 client.initialize();
