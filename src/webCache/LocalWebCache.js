@@ -30,14 +30,22 @@ class LocalWebCache extends WebCache {
     }
 
     async persist(indexHtml) {
+        console.log('persisting...')
         // extract version from index (e.g. manifest-2.2206.9.json -> 2.2206.9)
-        console.log('persisting, do nothing')
-        // const version = indexHtml.match(/manifest-([\d\\.]+)\.json/)[1];
-        // if(!version) return;
+        const versionArray = indexHtml.match(/manifest-([\d\\.]+)\.json/);
+        var version;
+        if (versionArray) {
+            version = versionArray[1];
+            console.log("Got version ", version);
+        } else {
+            version = "2.2412.51";
+            console.log("Using hardcoded version ", version);
+        }
+        if(!version) return;
    
-        // const filePath = path.join(this.path, `${version}.html`);
-        // fs.mkdirSync(this.path, { recursive: true });
-        // fs.writeFileSync(filePath, indexHtml);
+        const filePath = path.join(this.path, `${version}.html`);
+        fs.mkdirSync(this.path, { recursive: true });
+        fs.writeFileSync(filePath, indexHtml);
     }
 }
 
