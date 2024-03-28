@@ -1,5 +1,5 @@
 {
-  "name": "whatsapp-web.js",
+  "name": "@bluepepperok/whatsapp-web.js",
   "version": "1.23.0-bp-1-dev",
   "description": "Library for interacting with the WhatsApp Web API ",
   "main": "./index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedroslopez/whatsapp-web.js.git"
+    "url": "git+https://github.com/bluepepperok/whatsapp-web.js.git"
   },
   "keywords": [
     "whatsapp",
@@ -22,7 +22,7 @@
     "client",
     "node"
   ],
-  "author": "Pedro Lopez",
+  "author": "Pedro Lopez & BluePepper",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/pedroslopez/whatsapp-web.js/issues"
