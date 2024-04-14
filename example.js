@@ -3,16 +3,10 @@ const qrcode = require('qrcode-terminal');
 
 const client = new Client({
     authStrategy: new LocalAuth(),
-    webVersion: "2.2409.2",
-    webVersionCache: {
-            type: "remote",
-            remotePath:
-            "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2409.2.html",
-        },
     // proxyAuthentication: { username: 'username', password: 'password' },
     puppeteer: { 
         // args: ['--proxy-server=proxy-server-that-requires-authentication.example.com'],
-        headless: false,
+        headless: true,
     }
 });
 
