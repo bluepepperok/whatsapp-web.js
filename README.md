@@ -17,7 +17,7 @@ The module is available on github packages.
 - Use [example.js](example.js) to test your changes.
 - Make "Whatsapp productivity" use your local version of this library and test the changes.
   - Get "Whatsapp productivity" use your local version of this library  
-    - Update "Whatsapp productivity"'s `package.json` to use `@bluepepperok/whatsapp-web.js": "file:/pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js` and run `npm install`.
+    - Update "Whatsapp productivity"'s `package.json` to use `"@bluepepperok/whatsapp-web.js": "file:/pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js"` and run `npm install`.
      - Alternatively you could use `npm link` on whatsapp-web.js dir and then `npm link @bluepepperok/whatsapp-web.js` on "Whatsapp productivity" dir
   - If whatsapp-web.js changed its dependencies, make sure you are testing "Whatsapp productivity" with the updated dependencies.
   - Test the changes
