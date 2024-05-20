@@ -16,16 +16,17 @@ The module is available on github packages.
 - Make the changes you want.
 - Use [example.js](example.js) to test your changes.
 - Make "Whatsapp productivity" use your local version of this library and test the changes.
-  - Get "Whatsapp productivity" use your local version of this library  
-    - Update "Whatsapp productivity"'s `package.json` to use `"@bluepepperok/whatsapp-web.js": "file:/pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js"` and run `npm install`.
-     - Alternatively you could use `npm link` on whatsapp-web.js dir and then `npm link @bluepepperok/whatsapp-web.js` on "Whatsapp productivity" dir
-  - If whatsapp-web.js changed its dependencies, make sure you are testing "Whatsapp productivity" with the updated dependencies.
-  - Test the changes
+  - On "Whatsapp productivity" dir run `npx link pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js`. 
+    - This won't cange its `package.json`
+    - It will replace the downloaded release version in `whatsapp-productivity/node_modules/@bluepepperok/whatsapp-web.js/` for a symlink to `pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js`.
+    - whatsapp-web.js dependencies were downloaded into `whatsapp-productivity/node_modules` during `npm install`. TODO: if whatsapp-web.js local version changed its dependencies, find a way to test the updated dependencies.
+  - Run "Whatsapp productivity" and make sure everything works fine.
+  - Run `npm install` to revert `npx link pathToBaseDirWhereYouCloneGithubRepos/whatsapp-web.js`.
 - Update the `version` field on [package.json](package.json) to `originalVersion-bp-N` and commit the file to git.
 - To publish a package version you need your own `.npmrc` (See `.npmrc.example`)
 - `npm publish`
 - Make sure the package was published on the packages section of this repo.
-- Update "Whatsapp productivity"'s `package.json` to use the new version of this library and test the changes.
+- Update "Whatsapp productivity"'s `package.json` to use the new version of this library, run `npm install` and test the changes.
 
 
 ## How to get the .npmrc authToken / YOUR_PERSONAL_ACCESS_TOKEN
